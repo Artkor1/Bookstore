@@ -265,7 +265,6 @@ public class Main {
 	
 	public void pytania() throws SQLException
 	{
-		//TODO
 		System.out.println("\n1. Wybierz dane o wszystkich klientach ksiêgarni"
 				+ "\n2. Wybierz Imiê, Nazwisko oraz adres email klientów, którzy posiadaj¹ email w domenie gmail"
 				+ "\n3. Wybierz wszystkie dane o klientach, którzy zakupili ksi¹¿kê pod tytu³em \"Krzy¿acy\""
@@ -379,15 +378,6 @@ public class Main {
 		    }
 		}
 		menu();
-		
-		/*ResultSet rs = myStmt.executeQuery("select * from ksiazka natural join autor order by ksiazka.IdKsiazki");
-		System.out.println("\nSpis ksi¹¿ek: ");
-		while (rs.next())
-		{
-			System.out.println(rs.getInt("IdKsiazki") + ". " + rs.getString("Tytul") + ", " + rs.getString("Imie")+ " " + rs.getString("Nazwisko") +
-					", " + rs.getInt("RokWydania") + "r, " + rs.getFloat("Cena") + "zl, " + rs.getString("Oprawka") + " oprawka");
-		}*/
-		
 	}
 	
 	
@@ -398,23 +388,6 @@ public class Main {
 			
 			//create a statement
 			myStmt = myConn.createStatement();
-			
-			
-			//wyswietlanie
-			//ResultSet myRs = myStmt.executeQuery("select * from autor");
-			
-			//process the result set
-			//while (myRs.next())
-			//{
-				//System.out.println(myRs.getString(2));
-				//System.out.println(myRs.getString(1) + ", " +myRs.getString(2) + ", " + myRs.getString(3));
-			//}
-			
-			
-			//insertowanie
-			//execute sql query
-			//String sql = "insert into testtable values ('17','xyzzzzz','56')";
-			//myStmt.executeUpdate(sql);
 		}
 		catch (Exception exc){
 			exc.printStackTrace();
@@ -422,7 +395,6 @@ public class Main {
 		Main m = new Main();
 		scanner = new Scanner(System.in); 
 		m.logowanie();
-		//m.menu();
 		scanner.close();
 	}
 }
