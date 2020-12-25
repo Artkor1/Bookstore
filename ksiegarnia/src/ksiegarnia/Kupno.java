@@ -143,7 +143,6 @@ public class Kupno {
 		for(int i=0;i<koszyk.size();i++)
 		{
 			result+="\n" + (i+1) +". " + koszyk.get(i);
-			//result+=koszyk.get(i);
 		}
 		result+="\nCa³kowita kwota: " + kwota + "   zap³acono: " + (czy_zaplacono ? "tak" : "nie") +
 				"\nData zamówienia: " + data_zamowienia + "\nPrzewidywana data dostarczenia: " +
